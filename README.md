@@ -10,7 +10,7 @@ Usage
 -----
 Add shortcut to your keybindings:
 
-`{ "keys": ["alt+d], "command": "go_to_file" }`
+`{ "keys": ["alt+d"], "command": "go_to_file" }`
 
 1) Highlight the text using `cmd+d`
 
