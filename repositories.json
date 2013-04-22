@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0.0",
+  "repositories": [
+    "https://github.com/gs/sublime-text-go-to-file"
+  ],
+  "package_name_map": {
+    "sublime-text-go-to-file": "GoToFile"
+  }
+}
