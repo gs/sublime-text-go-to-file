@@ -5,16 +5,19 @@ Overview
 --------
 Plugin searches for a file under the cursor and opens it in new tab.
 (The idea comes from Vim `gf` functionality as I missed it in Sublime Text and also the script found on https://gist.github.com/jbjornson/1186126 written by @jbjornson helped a lot!)
+Additional functionality - printing currently open file path in status bar and copy it to clipboard.
 
 Usage
 -----
 Add shortcut to your keybindings:
 
-`{ "keys": ["alt+d"], "command": "go_to_file" }`
+    {
+      "keys": ["alt+d"], "command": "go_to_file",
+      "keys": ["alt+i"], "command": "file_info"
+    }
 
-1) Highlight the text using `cmd+d`
-
-2) Press `alt+d`
+You can highlight the text using `cmd+d` and press `alt+d`.
+Press `alt-i` to get info about currently open file.
 
 
 Maintainers:

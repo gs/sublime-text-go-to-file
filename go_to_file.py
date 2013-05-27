@@ -67,3 +67,12 @@ class GoToFile(sublime_plugin.TextCommand):
         for dir, dirnames, files in os.walk(directory):
             dirnames[:] = [dirname for dirname in dirnames]
             yield dir, dirnames, files
+
+class FileInfo(sublime_plugin.WindowCommand):
+    def run(self):
+        path = self.current_file()
+        sublime.set_clipboard(path)
+        sublime.status_message(path)
+
+    def current_file(self):
+        return self.window.active_view().file_name()
