@@ -10,23 +10,20 @@ class GoToFile(sublime_plugin.TextCommand):
             selected_text = self.get_selection(region)
             whole_line = self.get_line(region)
             clipboard = sublime.get_clipboard().strip()
-
-            candidates = [quoted_text, selected_text, whole_line, clipboard]
+            candidates = [selected_text, quoted_text, whole_line]
             for text in candidates:
                 if len(text) == 0:
                     continue
-
                 self.potential_files = self.get_filename(text)
                 if len(self.potential_files) > 0:
                     break
-
             if len(self.potential_files) > 1:
                 self.view.window().show_quick_panel(self.potential_files, self.open_file)
             elif len(self.potential_files) == 1:
                 print("Opening file '%s'" % (self.potential_files[0]))
                 self.view.window().open_file(self.potential_files[0])
             else:
-                sublime.error_message("No file found!")
+                sublime.error_message( "No file found")
 
     def open_file(self, selected_index):
         if selected_index != -1:
@@ -55,12 +52,15 @@ class GoToFile(sublime_plugin.TextCommand):
 
     def get_filename(self, text):
         results = []
+        text = text.replace('\\', os.sep).strip().replace('import ', '').replace('use ', '').replace(';', '')
+
         directories = self.view.window().folders()
         for directory in directories:
             for dirname, _, files in self.walk(directory):
                 for file in files:
-                    if re.search(text, file):
-                        results += [dirname + os.sep + file]
+                    fielName = dirname + os.sep + file
+                    if re.search(text, fielName):
+                        results += [fielName]
         return results
 
     def walk(self, directory):
