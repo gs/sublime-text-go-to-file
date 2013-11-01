@@ -51,7 +51,9 @@ Steven Note
 ----
 This version, while not merge with fork branch, has more power to find files basead on class name.
 
+
 Try: 
-    - select namespace and click alt+d
-    - click on word of class name and click alt+d
-    - click on path of template file and click alt+d
+
+ - select namespace and click alt+d
+ - click on word of class name and click alt+d
+ - click on path of template file and click alt+d
