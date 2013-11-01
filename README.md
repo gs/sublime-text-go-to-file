@@ -38,6 +38,14 @@ Go to your Sublime Text 3 `Packages` directory
 
 and clone the repository using the command below:
 
+
+This version:
+``` shell
+git clone https://github.com/stvkoch/sublime-text-go-to-file.git GoToFile
+```
+
+
+Original version without open file from class name:
 ``` shell
 git clone https://github.com/gs/sublime-text-go-to-file.git GoToFile
 ```
