@@ -38,6 +38,14 @@ Go to your Sublime Text 3 `Packages` directory
 
 and clone the repository using the command below:
 
+
+This version:
+``` shell
+git clone https://github.com/stvkoch/sublime-text-go-to-file.git GoToFile
+```
+
+
+Original version without open file from class name:
 ``` shell
 git clone https://github.com/gs/sublime-text-go-to-file.git GoToFile
 ```
@@ -50,3 +58,10 @@ Please open an issue at https://github.com/gs/sublime-text-go-to-file if you dis
 Steven Note
 ----
 This version, while not merge with fork branch, has more power to find files basead on class name.
+
+
+Try: 
+
+ - select namespace and click alt+d
+ - click on word of class name and click alt+d
+ - click on path of template file and click alt+d
