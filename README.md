@@ -45,3 +45,8 @@ git clone https://github.com/gs/sublime-text-go-to-file.git GoToFile
 Note
 ----
 Please open an issue at https://github.com/gs/sublime-text-go-to-file if you discover a problem or would like to see a feature/change implemented.
+
+
+Steven Note
+----
+This version, while not merge with fork branch, has more power to find files basead on class name.
