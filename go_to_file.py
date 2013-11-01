@@ -62,8 +62,8 @@ class GoToFile(sublime_plugin.TextCommand):
 
     def get_filename(self, text):
         results = []
-        text = text.replace('\\', os.sep).replace('import ', '').replace('use ', '').replace(';', '').strip()
-
+        text = text.replace('\\', os.sep).replace(os.sep+os.sep, os.sep).replace('import ', '').replace('use ', '').replace(';', '').strip()
+        print "get filename " + text
         directories = self.view.window().folders()
         for directory in directories:
             for dirname, _, files in self.walk(directory):
@@ -86,6 +86,7 @@ class GoToFile(sublime_plugin.TextCommand):
             patternStr = view.substr(view.word(sel)).strip()
             lineStr = view.substr(view.line(sel)).strip()
             result = re.search( '(([^(\s|=|\+|\.)|,]*)'+patternStr+'[^(\s|:|;|,|\.|\(]*)', lineStr )
+            print "Result "+result.group()
             if result != None:
                 return result.group()
 
