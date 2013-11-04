@@ -8,6 +8,7 @@ class GoToFile(sublime_plugin.TextCommand):
             # Collect the texts that may possibly be filenames
             quoted_text = self.get_quoted_selection(region).split(os.sep)[-1]
             selected_text = self.get_selection(region)
+            text_on_cursor = None
             if region.begin() == region.end():
                 word = self.view.word(region)
                 if not word.empty():
