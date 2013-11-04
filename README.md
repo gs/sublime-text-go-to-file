@@ -1,3 +1,8 @@
+Note:
+
+This plugin has some differences that the original: See here: https://github.com/stvkoch/sublime-text-go-to-file/compare/gs:master...master
+
+
 Sublime Text Go To File
 =======================
 
