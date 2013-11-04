@@ -11,11 +11,11 @@ class GoToFile(sublime_plugin.TextCommand):
             if region.begin() == region.end():
                 word = self.view.word(region)
                 if not word.empty():
-                    selected_text = self.view.substr(word)
+                    text_on_cursor = self.view.substr(word)
                 # view.run_command("expand_selection", {"to": "word"})
                 # selected_text = self.get_selection(region)
             whole_line = self.get_line(region)
-            candidates = [selected_text, self.extract_candidate_from_line(), quoted_text, whole_line]
+            candidates = [selected_text, self.extract_candidate_from_line(), text_on_cursor, quoted_text, whole_line]
             self.try_open(candidates)
 
     def try_open(self, candidates):
