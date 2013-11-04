@@ -93,7 +93,6 @@ class GoToFile(sublime_plugin.TextCommand):
             patternStr = view.substr(view.word(sel)).strip()
             lineStr = view.substr(view.line(sel)).strip()
             result = re.search( '(([^(\s|=|\+|\.)|,]*)'+patternStr+'[^(\s|:|;|,|\.|\(]*)', lineStr )
-            print "Result "+result.group()
             if result != None:
                 return result.group()
 
