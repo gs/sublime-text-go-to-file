@@ -15,7 +15,7 @@ class GoToFile(sublime_plugin.TextCommand):
                 # view.run_command("expand_selection", {"to": "word"})
                 # selected_text = self.get_selection(region)
             whole_line = self.get_line(region)
-            candidates = [selected_text, self.extract_candidate_from_line(), text_on_cursor, quoted_text, whole_line]
+            candidates = [selected_text, self.extract_candidate_from_line(), quoted_text, text_on_cursor, whole_line]
             self.try_open(candidates)
 
     def try_open(self, candidates):
