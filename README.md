@@ -60,13 +60,14 @@ Note
 Please open an issue at https://github.com/gs/sublime-text-go-to-file if you discover a problem or would like to see a feature/change implemented.
 
 
-Steven Note
+Big Thanks to...
+----------------
+
+@stvkoch  - who improved the plugin a LOT!
+
+
+Try:
 ----
-This version, while not merge with fork branch, has more power to find files basead on class name.
-
-
-Try: 
-
  - select namespace and click alt+d
  - click on word of class name and click alt+d
  - click on path of template file and click alt+d
