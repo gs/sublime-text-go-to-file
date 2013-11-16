@@ -70,7 +70,7 @@ class GoToFile(sublime_plugin.TextCommand):
     def get_filename(self, text):
         results = []
         text = text.replace('\\', os.sep).replace(os.sep+os.sep, os.sep).replace('import ', '').replace('use ', '').replace(';', '').strip()
-        print "get filename " + text
+        print("get filename " + text)
         directories = self.view.window().folders()
         for directory in directories:
             for dirname, _, files in self.walk(directory):
