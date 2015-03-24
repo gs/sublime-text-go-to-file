@@ -104,3 +104,17 @@ class FileInfo(sublime_plugin.WindowCommand):
 
     def current_file(self):
         return self.window.active_view().file_name()
+
+class FileInfoShort(FileInfo):
+    def run(self):
+        path = self.extract_path(self.current_file())
+        sublime.set_clipboard(path)
+        sublime.status_message(path)
+
+    def extract_path(self, file_path):
+      directories = self.window.folders()
+      if directories:
+          project_path = directories[0]
+          return file_path.replace(project_path + '/', '')
+      else:
+          return file_path

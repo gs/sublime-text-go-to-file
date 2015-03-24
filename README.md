@@ -19,12 +19,14 @@ Add shortcut to your keybindings:
 
     {
       "keys": ["alt+d"], "command": "go_to_file",
-      "keys": ["alt+i"], "command": "file_info"
+      "keys": ["alt+i"], "command": "file_info",
+      "keys": ["alt+k"], "command": "file_info_short"
     }
 
 You can highlight the text using `cmd+d` and press `alt+d`.
 
 Press `alt-i` to get info about currently opened file.
+Press `alt-k` to get short info about currently opened file.
 
 
 Maintainers:

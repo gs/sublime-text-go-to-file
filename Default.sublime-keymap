@@ -1,4 +1,5 @@
 [
 	{"keys": ["alt+d"], "command": "go_to_file"},
-	{"keys": ["alt+i"], "command": "file_info"}
+	{"keys": ["alt+i"], "command": "file_info"},
+	{"keys": ["alt+k"], "command": "file_info_short"}
 ]
