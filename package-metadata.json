@@ -1,7 +1,0 @@
-{
-  "url": "https://github.com/stvkoch/sublime-text-go-to-file",
-  "version": "1.0.1",
-  "description": "Sublime Text plugin searches for a file under the cursor or select and opens it in new tab.",
-  "author": "Grzegorz Smajdor & Maciej Gajek & Steven Koch",
-  "homepage": "https://github.com/stvkoch/sublime-text-go-to-file"
-}
