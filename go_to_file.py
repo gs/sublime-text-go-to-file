@@ -32,7 +32,7 @@ class GoToFile(sublime_plugin.TextCommand):
             self.view.window().show_quick_panel(self.potential_files, self.open_file)
         elif len(self.potential_files) == 1:
             print("Opening file '%s'" % (self.potential_files[0]))
-            self.view.window().open_file(self.potential_files[0])
+            self.view.window().open_file(self.potential_files[0],sublime.ENCODED_POSITION)
         else:
             sublime.error_message("No file found")
 
@@ -41,7 +41,7 @@ class GoToFile(sublime_plugin.TextCommand):
         if selected_index != -1:
             file = self.potential_files[selected_index]
             print("Opening file '%s'" % (file))
-            self.view.window().open_file(file)
+            self.view.window().open_file(file,sublime.ENCODED_POSITION)
 
 
     def get_selection(self, region):
